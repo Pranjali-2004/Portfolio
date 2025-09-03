@@ -1,0 +1,202 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pranjali Tripathi | Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Basic Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #121212;
+      color: #f4f4f4;
+      scroll-behavior: smooth;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #1e1e1e;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+      transition: background 0.3s;
+    }
+
+    nav a {
+      color: #fff;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+      transition: transform 0.3s ease;
+    }
+
+    nav a:hover {
+      transform: scale(1.1);
+      color: #00ffe5;
+    }
+
+    header {
+      height: 100vh;
+      background: linear-gradient(135deg, #1a1a1a, #333);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      animation: bgmove 10s infinite alternate ease-in-out;
+    }
+
+    @keyframes bgmove {
+      0% {background-position: 0% 50%;}
+      100% {background-position: 100% 50%;}
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      color: #00ffe5;
+      text-shadow: 2px 2px 5px #000;
+    }
+
+    .hero p {
+      font-size: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    #projects {
+      background: linear-gradient(145deg, #222, #111);
+      padding: 4rem 2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      perspective: 1000px;
+    }
+
+    .project {
+      background: #1e1e1e;
+      padding: 1.5rem;
+      border-radius: 15px;
+      transition: transform 0.5s, box-shadow 0.5s;
+      transform-style: preserve-3d;
+    }
+
+    .project:hover {
+      transform: rotateY(10deg) scale(1.05);
+      box-shadow: 0 0 30px rgba(0, 255, 229, 0.6);
+    }
+
+    .project h3 {
+      color: #00ffe5;
+    }
+
+    footer {
+      background: #1e1e1e;
+      text-align: center;
+      padding: 2rem;
+      margin-top: 3rem;
+    }
+
+    footer a {
+      color: #00ffe5;
+      margin: 0 1rem;
+      transition: color 0.3s;
+    }
+
+    footer a:hover {
+      color: #fff;
+    }
+
+    #achievements {
+      padding: 3rem;
+      background: #111;
+    }
+
+    #achievements h2 {
+      margin-bottom: 1rem;
+      color: #00ffe5;
+      text-align: center;
+    }
+
+    #achievements ul li {
+      margin-bottom: 0.5rem;
+      list-style: square;
+      padding-left: 1rem;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <div class="logo"><a href="#">Pranjali</a></div>
+    <div>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#achievements">Achievements</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <h1>Hello, I'm Pranjali Tripathi</h1>
+    <p>Cybersecurity Specialist | Frontend Developer | Dancer | Content Creator</p>
+  </header>
+
+  <section id="projects">
+    <div class="project">
+      <h3>CareConnect</h3>
+      <p>A mental health and wellness platform for healthcare workers – ideathon finalist.</p>
+    </div>
+    <div class="project">
+      <h3>Rhythm Roots</h3>
+      <p>ML-based platform for dance culture insights and image analysis.</p>
+    </div>
+    <div class="project">
+      <h3>Collab.Connect.Tube</h3>
+      <p>Collaboration platform for YouTube creators improving productivity by 20%.</p>
+    </div>
+  </section>
+
+  <section id="achievements">
+    <h2>Achievements & Recognitions</h2>
+    <ul>
+      <li>Pre-Finalist @ LEAP Providence Ideathon for “CareConnect”</li>
+      <li>Top 200 Semi-Finalist @ Smart India Hackathon</li>
+      <li>Certificate of Appreciation @ Internal Hackathon (UI/UX Role)</li>
+      <li>Selected for India Space Lab Program</li>
+      <li>Participated in India International Science Festival</li>
+      <li>Completed SIP 2024 with Bhopal Police Commissionerate</li>
+      <li>Guest Lectures & Experimental Learning Visits to L&T Metro, IDRBT, Sabin Academy</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2 style="text-align: center; margin-top: 2rem;">Contact Me</h2>
+    <form style="text-align: center; margin: 2rem auto; max-width: 500px;">
+      <input type="text" placeholder="Your Name" style="padding: 1rem; margin: 0.5rem; width: 90%;"><br>
+      <input type="email" placeholder="Your Email" style="padding: 1rem; margin: 0.5rem; width: 90%;"><br>
+      <textarea placeholder="Your Message" rows="5" style="padding: 1rem; margin: 0.5rem; width: 90%;"></textarea><br>
+      <button style="padding: 1rem 2rem; background: #00ffe5; border: none; color: #000; cursor: pointer;">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>Connect with me:</p>
+    <a href="https://github.com/Pranjali-2004" target="_blank">GitHub</a>
+    <a href="https://www.linkedin.com/in/pranjali-tripathi/" target="_blank">LinkedIn</a>
+    <a href="https://www.youtube.com/@Pranjaliiiiiii" target="_blank">YouTube</a>
+    <a href="file:///D:/Pranjali%20Documents/New%20resume.pdf" target="_blank">Resume</a>
+  </footer>
+</body>
+</html>
